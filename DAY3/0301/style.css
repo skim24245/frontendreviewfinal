@@ -1,0 +1,202 @@
+.navbar {
+    /* 
+    플렉스 박스로 만들어준다. */
+    display: flex;
+
+    /* 
+     옆으로 정렬해주기
+     space-between은 컨텐츠 사이에 중간중간
+     스페이스르 넣어주는 역할을 한다.
+     */
+    justify-content: space-between;
+
+    /*
+     수직으로 정렬
+     현재 주어진 축과 반대방향으로 적용을 시킨다.(수직)
+      */
+
+    align-items: center;
+    /* 
+      색상 입혀보자
+       */
+    background-color: blueviolet;
+    /* 내부적으로 벽이나 콘텐츠 등 
+    전체적으로 모서리가 붙어있어서 
+    padding을 준다. 8px가 위아래고 12px가 양옆임*/
+    padding: 8px 12px;
+}
+
+/* 원하지 않는 공백을 지워버린다. */
+body {
+
+    margin: 0;
+}
+
+/* 
+a 태그에 텍스트 밑줄과 색상이 있는데
+text-decoration으로 옆애주자.
+*/
+a {
+    text-decoration: none;
+    color: wheat;
+}
+
+/*로고 사이즈를 키워보자*/
+.navbar_logo {
+    font-size: 24px;
+    color: wheat;
+
+}
+
+/*로고 색깔을 입혀본다.*/
+.navbar_logo {
+    color: yellow;
+}
+
+/* 
+이제 "navbar_menu를 flew 박스로(옆으로 진행하는
+박스)로 변경  */
+
+.navbar_menu {
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    /* 
+    list 목록으로 되어있어서 점점점....으로 되어있는데
+    이녀석을 없애보는 것 */
+    list-style: none;
+    /* 
+    메뉴가 자세히 보면 센터가 아닌 것을
+    알 수 있어서 맞춰주기 위해서
+    padding을 적용한다 */
+    padding-left: 0;
+}
+
+/* 메뉴 아이템들이 다닥다닥 붙어있기 때문에
+스페이스를 넣어서 정렬을 해준다 */
+
+.navbar_menu li {
+    padding: 8px 12px;
+}
+
+/*link icon의 스타일을 지정한다.
+점점점 생긴 목록 스타일을 없애주고
+스타일을 지정해준다.
+*/
+
+.navbar_icons {
+    list-style: none;
+    color: white;
+    /* 
+    너네들 옆으로 정렬해 = 띄지 말고 옆으로 나란히*/
+    display: flex;
+    padding-left: 0;
+    display: none;
+}
+
+/* navbar_icons의 간격이 다닥다닥 붙어있어서
+간격을 넣어보자 */
+
+.navbar_icons li {
+    /* list라는 클래스에 위 아래 양 옆에 
+    padding을 준다 */
+    padding: 8px 12px;
+
+}
+
+/* 메뉴에 마우스를 올리면 배경색이 변경되도록
+해보자. */
+
+.navbar_menu li:hover {
+    background-color:burlywood;
+    border-radius: 3px;
+    /* 깍아서 둥그렇게 만든거=border-radiux */
+}
+
+/* 
+원래 문서의 흐름에서 빠져나와서 
+지정된 위치에 정돈이 되게 하도록 적용
+*/
+
+.navbar_toggleBtn {
+/* 원래 문서의 흐름을 벗어나는 방법
+포지션을 정대 경로로 지정해준다.
+home photo schedule faq booking 등 가운데 정렬
+되어 있는 것에서 벗어난다는 뜻
+*/
+position: absolute;
+/* 오른쪽의 적당한 위치에 위치하도록 해준다 */
+right:45px;
+font-size: 24px;
+color: wheat;
+/* 햄버거빵이 기본으로 안보이도록 해준다 */
+display: none;
+
+}
+
+/* 
+반응형 웹사이트 만들기 위해
+크기가 일정정도 적어졌을 때
+다르게 적용할 스타일을 입힌다. 
+.미디어 쿼리를 사용한다.
+@밑에 media screen은 외워서 쓰면 된다.
+*/
+
+@media screen and (max-width:770px) {
+
+    /* 
+맨 바깥쪽에 있는 .navbar를 
+row에서 column으로 바꾼다.
+*/
+    .navbar {
+        /* 공간을 여유롭게 하기 위해서
+        */
+        flex-direction: column;
+        padding: 8px 24px;
+
+    }
+
+    .navbar_menu {
+        flex-direction: column;
+        /* 
+        반대축 아이템즈를 사용해서
+        center 중앙을 맞춰준다 */
+        align-items: center;
+        width: 100%;
+        display: none;
+
+    }
+
+    /* 
+    너비 만큼 하이라이트가 생기도록 해준다.
+    */
+    .navbar_menu li{
+        width: 100%;
+        /* 
+        자동으로 텍스트가 왼쪽으로 붙는다
+        text-aling을 center로 해준다. */
+        text-align: center;
+    }
+    /* 
+    .navbar_icons 방향을 바꾸지 않은 상태
+    (현상태)에서 중간으로 가도록 설정해준다.
+    
+    */
+    .navbar_icons{
+        /* 지금 현재 축에서 중간으로 이동 */
+        justify-content: center;
+
+        /* 축을 전체로 설정해준다 */
+        width:100%;
+         display: none;
+    }
+    /* 줄였을 때는 햄버거 
+    빵이 나와야 한다 */
+    .navbar_toggleBtn{
+        display:block;
+    }
+
+    .navbar_menu.active,
+    .navbar_icons.active{
+        display:flex;
+    }
+}
