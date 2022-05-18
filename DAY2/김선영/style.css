@@ -1,0 +1,27 @@
+#기타
+ {
+    margin : 0;
+    padding: 0;
+}
+
+
+#이력서{
+    color: #757575; 
+}
+
+
+
+div {
+    width :600px;
+    height:900px;
+    margin: 0 auto;
+    border: 2px solid #000;
+    font-size: 100px;
+    text-align: center;
+    line-height:300px;
+} 
+
+button:hover{
+    color: #9c27b0;
+    background: #e8eaf6;
+}
