@@ -1,0 +1,52 @@
+/* 초기화 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("img.jpg") no-repeat center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+}
+
+.login_form {
+    position: relative;
+}
+
+.signup-form h1 {
+    font-size: 35px;
+    color: rgb(9, 9, 9);
+    text-align: center;
+}
+
+
+.form-group input {
+    padding: 20px 10px 10px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #999;
+    font-size: 18px;
+    color: black;
+    outline: none;
+}
+
+.btn_area {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 35px;
+    margin-top: 50px;
+}
+
+
+.caption {
+    text-align: center;
+}

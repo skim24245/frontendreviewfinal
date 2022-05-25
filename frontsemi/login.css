@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("img.jpg") no-repeat center;
+    background-size: cover;
+}
+
+h1{
+    text-align: center;
+} 
+
+
+
+/* 새롭게 추가 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.singup-form {
+    position: relative;
+    z-index: 2;
+}
+
+.login-form h1 {
+    font-size: 32px;
+    color: rgb(59, 54, 54);
+    text-align:center;
+}
+
+.login_form {
+    width: 400px;
+}
+
+.login_form input {
+    width: 100%;
+    padding: 20px 10px 10px;
+    border: none;
+    border-bottom: 1px solid #999;
+    font-size: 18px;
+    color: black;
+    outline: none;
+}
+
+.login_btn {
+    font-size : 18px;
+    justify-content: center;
+}

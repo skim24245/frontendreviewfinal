@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+
+    <section class="signup-form">
+        <h1>회원가입</h1>
+        <form action="" method="get">
+            <!-- 아이디 입력 -->
+            <div class="form-group">
+                <label for="id">아이디 </label><BR>
+                <input id="id" name="userId" type="text" placeholder="아이디입력" required><br>
+                <!-- <button id="button1" type="button" onclick="id_check();"> 중복확인</button> -->
+            </div>
+            <!-- 패스워드 입력 -->
+            <div class="form-group">
+                <label for="pwd">패스워드</label><BR>
+                <input id="pwd" name="userPW" type="password" size=20 type="password" minlength="8"
+                    placeholder="영문,숫자 포함 8자리" required><br>
+            </div>
+            <!-- 이메일 정보 입력 -->
+            <div class="form-group">
+                <label for="email">이메일주소 </label><BR>
+                <input id="email" name="userEmail" type="email" placeholder="이메일 주소 입력" required> <br>
+            </div>
+            <!-- 성명 입력 -->
+            <div class="form-group">
+                <label for="name">성명 </label><BR>
+                <input id="name" name="userName" type="text" size="20" placeholder="이름 입력" required> <br>
+            </div>
+
+
+            <!-- 버튼-->
+            <div class="btn_area">
+                <p></p>
+                <!-- 뒤로가기(새로고침)  -->
+                <button id="goback" onclick="history.back()"
+                    style="border-width: 0; WIDTH: 140pt; HEIGHT: 30pt; background-color: rgb(146, 144, 142); border-radius: 20px;">새로고침</button>
+
+                <!-- 가입하기 버튼 -->
+                <button type="button" id="btnJoin" onclick="location.href='index.html'"
+                    style="border-width: 0; WIDTH: 140pt; HEIGHT: 30pt;background-color: rgb(146, 144, 142); border-radius: 20px;">
+                    <span>가입하기</span>
+                </button>
+            </div>
+
+
+            </div>
+        </form>
+
+        <div class="caption">
+            <a href="">Forgot Pasword?</a>
+        </div>
+        <footer>
+            이용약관 개인정보 처리방침 운영정책 고객센터 공지사항<br>
+            Copyright © timer page. All rights reserved.
+        </footer>
+
+
+    </section>
+    <script src="js/signup.js"></script>
+</body>
+
+</html>

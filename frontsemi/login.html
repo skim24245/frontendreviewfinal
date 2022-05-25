@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Document</title>
+</head>
+<body>
+    <article>
+        <div class="form_group">
+            <h1>로그인</h1>
+            <div class="login_logo"></div>
+            <form class="login_form">
+                <label for="login">아이디</label><br>
+                <input type="text" id="Login_id" class="login_text" name="ID" placeholder="아이디를 입력하세요." required><br>
+                <label for="login">비밀번호</label><br>
+                <input type="password" id="Login_pwd" class="login_text" name="PWD" placeholder="비밀번호를 입력하세요." required><br>
+                <button id="Login_btn" class="login_btn" type="button">로그인</button>
+                <!-- onclick = "location.href='index.html'" -->
+            </form>
+            <a class="Login_bottom" href="">비밀번호 찾기</a>
+        </div>
+    </article>
+    <script src="js/login.js" defer=""></script>
+    <!-- <section class="login-form">
+        <h1>로그인</h1>
+        <form action="" method="get" class="form-group"></form>
+        <div class="form-group">
+            <div class="id">
+                <label for="login">아이디 </label><BR>
+                <input type="text" name="userId" placeholder="아이디" required><br>
+            </div>
+            <div class="password">
+                <label for="pwd">패스워드</label><BR>
+                <input id="pwd" name="userPW" size=20 type="password" minlength="8" placeholder="영문,숫자 포함 8자리" required><br>
+            </div>
+            <div class="btn">
+                <div class="btn-area">
+                <button type="submit" onclick="location.href = 'index.html'"> 로그인</button>
+            </div>
+        </div>         
+    </section>
+    </div> -->
+    <script src="js/login.js"></script>
+</body>
+</html>
